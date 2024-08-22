@@ -1,0 +1,35 @@
+body {
+    background-color: #000;
+}
+nav{
+    display: flex;
+    gap: 5px;
+    height: 100vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #0eb2cf;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: relative;
+}
+
+nav a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    margin-bottom: -4px;
+    background-color: blue;
+    bottom: 0;
+    left: 0;
+    transition: all .4s ease-in;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
